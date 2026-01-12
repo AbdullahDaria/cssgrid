@@ -1,0 +1,38 @@
+ #contenar{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3,200px) 50px;
+ }
+ 
+ .box{
+  background-color: aqua;
+  padding: 20px;
+ }
+  
+ .box1{
+  grid-row: span 5;
+ }
+ .box2{
+  grid-column: span 3;
+ }
+
+@media screen and (max-width:576px){
+  
+  #contenar{
+  
+  grid-template-rows: repeat(10,200px) 50px;
+ }
+   .box{
+    grid-column: span 2;
+    grid-row: span 2;
+   }
+ 
+}
+@media screen and (max-width:400px){
+
+    .box{
+    grid-column: span 10;
+    grid-row: span 1;
+   } 
+}
